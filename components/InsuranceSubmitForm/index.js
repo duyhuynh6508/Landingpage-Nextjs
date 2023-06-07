@@ -4,6 +4,10 @@ import SecondStep from "./SecondStep";
 import ThirdStep from "./ThirdStep";
 import LastStep from "./LastStep";
 import MultiStepProgressBar from "./MultiStepProgressBar";
+import styles from "@/styles/Home.module.css";
+import Image from 'next/image';
+
+
 
 const InsuranceSubmitForm = () => {
   //For manageing state of multi steps Form
@@ -50,23 +54,23 @@ const InsuranceSubmitForm = () => {
   };
 
   return (
-    <div className="userForm">
-      <div style={{ margin: "auto", width: "50%" }}>
+    <div className={styles.userForm}>
+      <div className={styles.progressBar}>
         <MultiStepProgressBar step={page} />
       </div>
 
-      <div className="userForm-container">
-        <div className="userForm-container-header">
+      <div className={styles.userFormContainer}>
+        <div className={styles.userFormContainerTitle}>
+          <Image src="/CarLogo.png" width={50} height={50} />
           <h1>
             {page === pageTitles.length
-              ? `Congratulations, ` + userInput.displayname
-              : pageTitles[page]}
+              ? `Congratulations, `
+              : 'Car Insurance'}
           </h1>
-          <p>{pageSubTitiles[page]}</p>
         </div>
-        <div className="userForm-container-body">{PageDisplay()}</div>
-        <div className="userForm-container-footer">
-          <button
+        <div className={styles.userFormContainerBody}>{PageDisplay()}</div>
+        <div className={styles.userFormContainerFooter}>
+          <button className={styles.formButton}
             onClick={() => {
               if (page === pageSubTitiles.length - 1) {
                 console.log(userInput);
@@ -84,4 +88,5 @@ const InsuranceSubmitForm = () => {
     </div>
   );
 };
+
 export default InsuranceSubmitForm;

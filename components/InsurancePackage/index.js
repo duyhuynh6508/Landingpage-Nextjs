@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import InsuranceSubmitForm from "../InsuranceSubmitForm";
 
 const InsurancePackage = () => {
-
   const [isSubmit, setSubmit] = useState(false);
 
   useEffect(() => {
-    setSubmit(false)
+    setSubmit(false);
   }, []);
 
-  const onChangeSubmit =()=>{
-    setSubmit(!isSubmit)
-  }
+  const onChangeSubmit = () => {
+    setSubmit(!isSubmit);
+  };
   return (
     <section className={styles.benifits}>
-      <h1>
-        What You Get
-      </h1>
+      <h1>What You Get</h1>
 
       <div className={styles.policies}>
         <div className={styles.policy}>
           <div className={styles.packageImage}>
-          <Image src="/Standard.png" width={350} height={270} />
+            <Image src="/Standard.png" width={350} height={270} />
           </div>
           <div className={styles.benifitCard}>
             <h2>Standard Coverage</h2>
@@ -39,7 +36,7 @@ const InsurancePackage = () => {
 
         <div className={styles.policy}>
           <div className={styles.packageImage}>
-          <Image src="/Premium.png"  width={350} height={270} />
+            <Image src="/Premium.png" width={350} height={270} />
           </div>
           <div className={styles.benifitCard}>
             <h2>Premium Coverage</h2>
@@ -54,14 +51,14 @@ const InsurancePackage = () => {
       </div>
 
       <button onClick={() => onChangeSubmit()}>Ready To get a quote?</button>
-      <div>
-      {isSubmit 
-      ? 
-      <InsuranceSubmitForm /> 
-      : 
-      null}
-      </div>
+
+      
+      {/* <div className={styles.submitFormContainer}>
+        <div className={styles.submitForm}>
+          <InsuranceSubmitForm /> 
+        </div>
+      </div> */}
     </section>
-    );
+  );
 };
-  export default InsurancePackage;
+export default InsurancePackage;

@@ -12,14 +12,18 @@ import styles from "@/styles/Home.module.css";
 import InsurancePackage from "@/components/InsurancePackage";
 import FAQ from "@/components/FAQ";
 import OtherInsurance from "@/components/OtherInsurance";
+import InsuranceSubmitForm from "@/components/InsuranceSubmitForm";
 
 export default function Service() {
   return (
     <>
       <div className={styles.main}>
-        <Header headerName="Service"/>
-        <Navbar navbarSelected="Service"/>
+        <Header headerName="Service" />
+        <Navbar navbarSelected="Service" />
         <InsurancePackage />
+        <div className={styles.entry}>
+          <InsuranceSubmitForm />
+        </div>
         <FAQ />
         <OtherInsurance />
         <Footer />
