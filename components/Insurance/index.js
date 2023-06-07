@@ -17,19 +17,9 @@ const Insurance = () => {
         description="Cover the medical, emergency, hospital and surgical expenses that derive from a complication of Cosmetic Surgery..."
       />
       <InsuranceCard
-        imageUrl="/SOAT.png"
-        title="SOAT"
-        description="Complying with the law and with the responsibility of guaranteeing a benefit for drivers, passengers or pedestrians..."
-      />
-      <InsuranceCard
         imageUrl="/TravelLogo.png"
         title="Travel insurance"
         description="During your trip you have an accident or illness, coordinating the medical services you require..."
-      />
-      <InsuranceCard
-        imageUrl="/LeasingLogo.png"
-        title="Digital Leasing"
-        description="Generating peace of mind knowing that every month you have the money paid by the tenants of your property..."
       />
       <InsuranceCard
         imageUrl="/PetLogo.png"

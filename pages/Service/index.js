@@ -9,7 +9,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
 import styles from "@/styles/Home.module.css";
-
+import InsurancePackage from "@/components/InsurancePackage";
+import FAQ from "@/components/FAQ";
+import OtherInsurance from "@/components/OtherInsurance";
 
 export default function Service() {
   return (
@@ -17,10 +19,9 @@ export default function Service() {
       <div className={styles.main}>
         <Header headerName="Service"/>
         <Navbar navbarSelected="Service"/>
-        <Hero />
-        <Insurance />
-        <Review />
-        <ContactForm/>
+        <InsurancePackage />
+        <FAQ />
+        <OtherInsurance />
         <Footer />
       </div>
     </>

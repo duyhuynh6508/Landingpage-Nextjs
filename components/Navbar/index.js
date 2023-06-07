@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from 'next/image';
 import styles from "@/styles/Home.module.css";
 
-const Navbar = ({navbarSelected}) => {
+const Navbar = ({ navbarSelected }) => {
 
-    return (
-      <div  className={styles.header}>
-        <Image src="/InsuranceLogo.png" alt="Lifesafe-logo" className={styles.logo} width={18} height={18} />
+  return (
+    <div className={styles.header}>
+      <Image src="/InsuranceLogo.png" alt="Lifesafe-logo" className={styles.logo} width={18} height={18} />
       <div className={styles.brandNname}>T Insurance</div>
       <nav className={styles.nav}>
         <ul>
@@ -33,8 +33,8 @@ const Navbar = ({navbarSelected}) => {
           </li>
         </ul>
       </nav>
-      </div>
-    );
-  };
-  
-  export default Navbar;
+    </div>
+  );
+};
+
+export default Navbar;

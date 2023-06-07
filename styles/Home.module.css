@@ -54,7 +54,7 @@
 .nav li {
   text-indent: 0;
   display: inline;
-  padding: 10px;
+  padding: 25px;
 }
 
 .navLink{
@@ -120,14 +120,20 @@
 
 .team{
   width: 80%;
-  animation: grow 1.5s linear;
+  animation: grow 1s linear;
+  animation-fill-mode: forwards;
+  user-select: none;
+}
+
+.packageImage{
+  animation: grow 1s linear;
   animation-fill-mode: forwards;
   user-select: none;
 }
 
 @media screen and (min-width:900px){
   .team{
-      width: 45%;
+      width: 65%;
   }
 }
 
@@ -368,13 +374,205 @@
 }
 
 .footer {
+  min-height: 200px;
   color: rgb(148, 144, 144);
   background-color: #1e2327;
   padding: 1em;
+  display: flex;
 }
 
 @media screen and (min-width: 900px) {
   .footer {
-     padding-left: 12%;
+     padding-left: 5%;
   }
+}
+
+.benifits {
+  background-color: rgb(233, 236, 241);
+  padding: 2em;
+}
+
+@media screen and (min-width: 900px) {
+  .benifits {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+.policies {
+  display: flex;
+  flex-direction: column;
+}
+
+.policy {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  .policies {
+    flex-direction: row;
+  }
+
+  .policy {
+    margin: 5%;
+  }
+
+  .policyImg {
+    width: 70%;
+  }
+}
+
+.benifits>h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #333;
+}
+
+.benifits h2 {
+  color: #333;
+}
+
+.policyImg {
+  width: 90%;
+}
+
+.benifitCard {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 900px) {
+  .benifitCard {
+    background-color: #fff;
+    padding: 20px;
+    padding-right: auto;
+    border-radius: 5px;
+  }
+}
+
+.benifits ul {
+  line-height: 1.8em;
+  list-style-position: inside;
+}
+
+.benifits>button {
+  margin: auto;
+  display: block;
+  background-color: #003bde;
+  color: #fff;
+  padding: 15px 20px 15px 20px;
+  text-transform: uppercase;
+  outline-width: 0;
+}
+
+.faqs {
+  background-color: #fff;
+  padding: 2em;
+}
+
+@media screen and (min-width: 900px) {
+  .faqs {
+    width: 80%;
+    margin: auto;
+  }
+
+  .faqContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faqs>h1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #333;
+}
+
+.faq {
+  color: #222;
+  margin: 10px;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 1em;
+  line-height: 1.6em;
+  background-color: rgb(248, 248, 250);
+  border-radius: 5px;
+}
+
+.q {
+  line-height: 2em;
+}
+
+.others {
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 20%;
+}
+
+
+@media screen and (min-width: 100px) {
+  .others {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .otherInsurances {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.otherInsurance {
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+}
+
+.otherInsurance>img {
+  max-width: 90%;
+  height: auto;
+}
+
+.otherInsurance {
+  color: #333;
+  box-shadow: 0px 10px 80px -10px rgba(44, 54, 92, 0.2);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width:160px) {
+  .otherInsurance {
+    margin: 2em;
+  }
+}
+
+.otherInsurance p {
+  margin-top: 10px;
+}
+
+
+/* CSS for each column */
+.footerColumn {
+  flex: 1;
+}
+
+/* Optional styling for column content */
+.footerColumn h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footerColumn ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 5px;
+}
+
+.footerNav:hover{
+  color: #ffffff;
 }
