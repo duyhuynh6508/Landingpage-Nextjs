@@ -603,11 +603,13 @@
 }
 .userFormContainerTitle{
   text-align: center;
+  margin-bottom: 25px;
 }
 .userFormContainerFooter {
   display: flex;
   margin: auto;
-  width: 100%;
+  margin-top: 30px;
+  width: 80%;
 }
 
 .userFormContainerBody {
@@ -616,9 +618,16 @@
 }
 
 .formLabel {
+  color: #fff;
   text-align: left;
   font-size: 12px;
 }
+
+.formTitle{
+  color: #fff;
+  font-size: 35px;
+}
+
 .formInput {
   width: 100%;
   padding: 12px 20px;
@@ -629,6 +638,8 @@
   box-sizing: border-box;
 }
 .formButton {
+  color: #fff;
+  font-size: 18px;
   width: 100%;
   background-color: #003bde;
   padding: 14px 20px;
@@ -642,7 +653,7 @@
   color: grey;
 }
 .progressBar{
-  margin-top: 20px;
+  padding-top: 50px;
   margin-bottom: 15px;
   margin-left: 25%;
   width: 50%;
@@ -791,4 +802,75 @@
   width: 100px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.step {
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  background-color: #664de5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step.completed {
+  background-color: #664de5;
+}
+
+.payment{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.paymenSummaryContainer{
+  height: 100%;
+  text-align: center;
+  width: auto;
+}
+
+.paymenSummaryContainer h2{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.paymenSummaryContainer span{
+  color: white;
+}
+
+.paymenSummaryContainer h4{
+  color: white;
+  font-size: 20;
+  margin-top: 10px;
+}
+
+.paymentCardContainer{
+  color: #777;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 30px;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px;
+}
+.paymentBoldText {
+  font-weight: bold;
+  color: #000;
+  display: inline-flex;
+}
+
+.paymentSimpleText{
+  font-weight: normal;
+  padding-left: 15px;
+}
+
+.cardItemWrapp{
+  text-align: center;
 }

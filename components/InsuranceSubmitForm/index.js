@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FirstStep from "./FirstStep";
+import InsuranceForm from "./InsuranceForm";
 import SecondStep from "./SecondStep";
 import ThirdStep from "./ThirdStep";
 import LastStep from "./LastStep";
@@ -13,45 +13,35 @@ const InsuranceSubmitForm = () => {
   //For manageing state of multi steps Form
   const [page, setPage] = useState(0);
 
-  const [userInput, setUserInput] = useState({
-    fullName: "",
-    displayname: "",
-    workspaceName: "",
-    workspaceUrl: "",
-    checkboxValue: ""
-  });
-
   //proceed to next step
   const nextStep = () => {
     setPage((currPage) => currPage + 1);
   };
 
-  const pageTitles = [
-    "Welcome! First things first...",
-    "Let's set up a home for all your work",
-    "How are you planning to use Eden?"
-  ];
-  const pageSubTitiles = [
-    "You can always change them later.",
-    "You can always create another workspace later",
-    "We'll streamline your setup expereince accordingly.",
-    "You have completed onboarding, you can start using the Eden"
-  ];
 
   const PageDisplay = () => {
     if (page === 0)
-      return <FirstStep nextStep={nextStep} handleChange={handleChange} />;
+      return <InsuranceForm nextStep={nextStep}/>;
     else if (page === 1)
-      return <SecondStep nextStep={nextStep} handleChange={handleChange} />;
+      return <SecondStep nextStep={nextStep} />;
     else if (page === 2)
-      return <ThirdStep nextStep={nextStep} handleChange={handleChange} />;
-    else return <LastStep nextStep={nextStep} handleChange={handleChange} />;
+      return <ThirdStep nextStep={nextStep} />;
+    else return <LastStep nextStep={nextStep} />;
   };
 
-  //handle field changes
-  const handleChange = (input) => (e) => {
-    setUserInput({ ...userInput, [input]: e.target.value });
-  };
+  const displayTitle = () => {
+    let title = "Car Insurance"
+    if(page === 1){
+      title = "Payment Summary"
+    }
+    else if(page === 2){
+      title = "Payment Card"
+    }
+    else if(page === 3){
+      title = "Complete"
+    }
+    return title;
+  }
 
   return (
     <div className={styles.userForm}>
@@ -61,27 +51,19 @@ const InsuranceSubmitForm = () => {
 
       <div className={styles.userFormContainer}>
         <div className={styles.userFormContainerTitle}>
-          <Image src="/CarLogo.png" width={50} height={50} />
-          <h1>
-            {page === pageTitles.length
-              ? `Congratulations, `
-              : 'Car Insurance'}
+          <h1 className={styles.formTitle}>
+              {displayTitle()}
           </h1>
+          <h2>{page === 0 ? '$100.00' : null}</h2>
         </div>
         <div className={styles.userFormContainerBody}>{PageDisplay()}</div>
         <div className={styles.userFormContainerFooter}>
           <button className={styles.formButton}
             onClick={() => {
-              if (page === pageSubTitiles.length - 1) {
-                console.log(userInput);
-              } else {
                 setPage((currPage) => currPage + 1);
-              }
             }}
           >
-            {page === pageSubTitiles.length - 1
-              ? "Launch Eden"
-              : "Create Workspace"}
+            Continue
           </button>
         </div>
       </div>

@@ -6,21 +6,24 @@ const MultiStepProgressBar = (props) => {
   return (
     <ProgressBar
       percent={(props.step + 1) * 25}
-      filledBackground="#664de5"
-      height="2px"
+      filledBackground="#003bde"
+      height="4px"
       style={{ margin: "auto" }}
     >
       <Step transition="scale">
         {({ accomplished, index }) => (
           <div
             style={{
-              height: "15px",
-              width: "15px",
+              color:'white',
+              display:'flex',
+              justifyContent:'center',
+              height: "25px",
+              width: "25px",
               border: "1px solid lightgray",
               borderRadius: "50%",
-              backgroundColor: `${accomplished ? "#664de5" : null}`
+              alignItems:'center',
+              backgroundColor: '#003bde'
             }}
-            className={`step ${accomplished ? "completed" : null}`}
           >
             1
           </div>
@@ -30,13 +33,16 @@ const MultiStepProgressBar = (props) => {
         {({ accomplished, index }) => (
           <div
             style={{
-              height: "15px",
-              width: "15px",
+              color:'white',
+              display:'flex',
+              justifyContent:'center',
+              height: "25px",
+              width: "25px",
               border: "1px solid lightgray",
               borderRadius: "50%",
-              backgroundColor: `${accomplished ? "#664de5" : null}`
+              alignItems:'center',
+              backgroundColor: '#003bde'
             }}
-            className={`step ${accomplished ? "completed" : null}`}
           >
             2
           </div>
@@ -46,14 +52,16 @@ const MultiStepProgressBar = (props) => {
         {({ accomplished, index }) => (
           <div
             style={{
-              height: "15px",
-              width: "15px",
-
+              color:'white',
+              display:'flex',
+              justifyContent:'center',
+              height: "25px",
+              width: "25px",
               border: "1px solid lightgray",
               borderRadius: "50%",
-              backgroundColor: `${accomplished ? "#664de5" : null}`
+              alignItems:'center',
+              backgroundColor: '#003bde'
             }}
-            className={`step ${accomplished ? "completed" : null}`}
           >
             3
           </div>
@@ -63,13 +71,16 @@ const MultiStepProgressBar = (props) => {
         {({ accomplished, index }) => (
           <div
             style={{
-              height: "15px",
-              width: "15px",
+              color:'white',
+              display:'flex',
+              justifyContent:'center',
+              height: "25px",
+              width: "25px",
               border: "1px solid lightgray",
               borderRadius: "50%",
-              backgroundColor: `${accomplished ? "#664de5" : null}`
+              alignItems:'center',
+              backgroundColor: '#003bde'
             }}
-            className={`step ${accomplished ? "completed" : null}`}
           >
             4
           </div>

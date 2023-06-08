@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "@/styles/Home.module.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-const FirstStep = (props) => {
+const InsuranceForm = (props) => {
+
+  const [interventionDate, setInterventionDate] = useState(new Date());
+
   return (
     <div className={styles.form}>
       <label className={styles.formLabel}>Full Name</label>
@@ -10,7 +15,6 @@ const FirstStep = (props) => {
         type="text"
         name="fullname"
         placeholder="Full Name"
-        onChange={props.handleChange("fullName")}
       />
 
       <label className={styles.formLabel}>Identification</label>
@@ -19,7 +23,6 @@ const FirstStep = (props) => {
         type="text"
         name="displayName"
         placeholder="Steve"
-        onChange={props.handleChange("displayname")}
       />
 
       <label className={styles.formLabel}>Email</label>
@@ -28,7 +31,6 @@ const FirstStep = (props) => {
         type="text"
         name="email"
         placeholder="Email"
-        onChange={props.handleChange("displayname")}
       />
 
       <label className={styles.formLabel}>Phone number</label>
@@ -37,7 +39,6 @@ const FirstStep = (props) => {
         type="text"
         name="phoneNumber"
         placeholder="Phone number"
-        onChange={props.handleChange("displayname")}
       />
       <label className={styles.formLabel}>Address</label>
       <input
@@ -45,25 +46,10 @@ const FirstStep = (props) => {
         type="text"
         name="address"
         placeholder="Address"
-        onChange={props.handleChange("displayname")}
       />
       <label className={styles.formLabel}>Intervention Date</label>
-      <input
-        className={styles.formInput}
-        type="text"
-        name="displayName"
-        placeholder="Steve"
-        onChange={props.handleChange("displayname")}
-      />
-      <label className={styles.formLabel}>Intervention Time</label>
-      <input
-        className={styles.formInput}
-        type="text"
-        name="displayName"
-        placeholder="Steve"
-        onChange={props.handleChange("displayname")}
-      />
+      <DatePicker  className={styles.formInput} selected={interventionDate} onChange={(date) => setInterventionDate(date)} />
     </div>
   );
 };
-export default FirstStep;
+export default InsuranceForm;

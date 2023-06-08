@@ -1,41 +1,30 @@
 import React from "react";
-import PersonIcon from "@mui/icons-material/Person";
-import GroupsIcon from "@mui/icons-material/Groups";
+import Image from 'next/image';
 
 const ThirdStep = (props) => {
   return (
-    <div className="card-container">
-      <label>
-        <input
-          type="radio"
-          className="card-input-element"
-          onChange={props.handleChange("checkboxValue")}
-          value="Individual"
-        />
-        <div className="card-input">
-          <PersonIcon />
-          <h3 className="panel-heading">For myself</h3>
-          <p className="panel-body">
-            Write better thing more clearly. Stay organised
-          </p>
+    <div>
+      <div>payment data top
+        <div>topcard
+          <Image src='/LogoVisa.png' width={100} height={100}></Image>
+          <Image src='/LogoVisaBlack.png' width={100} height={100}></Image>
         </div>
-      </label>
-
-      <label>
-        <input
-          type="radio"
-          className="card-input-element"
-          onChange={props.handleChange("checkboxValue")}
-          value="Company"
-        />
-        <div className="card-input">
-          <GroupsIcon />
-          <h3 className="panel-heading"> With my team</h3>
-          <p className="panel-body">
-            Wikis, docs, tasks and projects, all in one place.
-          </p>
+        <div>4242424242424242</div>
+        <div>card info
+          <div>carlos Cardenas</div>
+          <div>12/24</div>
         </div>
-      </label>
+      </div>
+      <div>payment data bottom
+        <div>bottom card info
+          <div>name on card</div>
+          <div>card number</div>
+          <div>expiration date and cvc
+            <div>expirationd date</div>
+            <div>cvc</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
