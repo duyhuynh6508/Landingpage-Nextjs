@@ -5,7 +5,6 @@ import ThirdStep from "./ThirdStep";
 import LastStep from "./LastStep";
 import MultiStepProgressBar from "./MultiStepProgressBar";
 import styles from "@/styles/Home.module.css";
-import Image from 'next/image';
 
 
 

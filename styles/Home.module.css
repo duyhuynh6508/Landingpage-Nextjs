@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family:'Montserrat', Arial,sans-serif;
+  font-family:Montserrat, Arial,sans-serif;
 }
 
 .header{
@@ -242,7 +242,7 @@
 }
 
 .review>.name::before{
-  content: '~';
+  content: ~;
 }
 
 @media screen and (min-width:900px){
@@ -254,7 +254,7 @@
   padding: 0;
   height:130px;
   position: relative;
-  background-image: url('/half-hex.svg');
+  background-image: url(/half-hex.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   outline: 0px;
@@ -268,7 +268,7 @@
 
 .contact{
   background-color: #267871;
-  background-image: url('/2hex.png');
+  background-image: url(/2hex.png);
   background-size:100% auto;
   background-repeat: no-repeat;
   max-width: 100vw;
@@ -661,9 +661,9 @@
 
 .servicesDetail_containerTitleDescription {
   font-size: 16px;
-  font-weight: '400';
+  font-weight: 400;
   margin-bottom: 10px;
-  color: 'black';
+  color: black;
 }
 
 .servicesDetail_containerDescription {
@@ -873,4 +873,91 @@
 
 .cardItemWrapp{
   text-align: center;
+}
+
+.paymentWrapp{
+  display: contents;
+}
+
+.paimentDataTop {
+  width: 450px;
+  height: 350px;
+  background: white;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.paimentDataTopCard {
+  background: white;
+  border-radius: 20px;
+}
+
+.paimentDataCardImgs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.paimentInput {
+  font-size: 20px;  
+  letter-spacing: 4px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #5a5a5a;
+    border:none;
+    border-bottom: 1px solid #1890ff;
+    outline: none;
+    width: 75%;
+}
+.paimentInputName{
+  font-size: 18px;  
+  margin-top: 5px;
+  font-weight: bold;
+  color: #5a5a5a;
+    border:none;
+    border-bottom: 1px solid #1890ff;
+    outline: none;
+    width: 75%;
+}
+.paimentDataCardInfo {
+  display: flex;
+  margin-top: 23px;
+  font-size: 20px;  
+}
+
+.paimentDataCardInfoName {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a5a5a;
+  text-transform: capitalize;
+  margin-left: 40px;
+  border:none;
+    border-bottom: 1px solid #1890ff;
+    outline: none;
+}
+
+.paimentDataCardInfoDate {
+  margin-left: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a5a5a;
+  margin-left: 110px;
+  border:none;
+  border-bottom: 1px solid #1890ff;
+  outline: none;
+}
+
+.inputContainer{
+  display: grid;
+  padding-left: 10%;
+  margin-bottom: 15px;
+}
+
+.paymentSpan{
+  font-size: 14px;
+  font-weight: 900;
+  color: #777;
+}
+.paimentDataBottomCardInfo2{
+  display: flex;
 }
