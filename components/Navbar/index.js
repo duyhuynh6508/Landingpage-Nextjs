@@ -8,7 +8,7 @@ const Navbar = ({ navbarSelected }) => {
   return (
     <div className={styles.header}>
       <Image src="/InsuranceLogo.png" alt="Lifesafe-logo" className={styles.logo} width={18} height={18} />
-      <div className={styles.brandNname}>T Insurance</div>
+      <div className={styles.brandNname}>TMA Insurance</div>
       <nav className={styles.nav}>
         <ul>
           <li className={navbarSelected == 'Home' ? styles.active : ""}>

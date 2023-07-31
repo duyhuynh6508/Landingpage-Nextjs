@@ -5,7 +5,7 @@ const SecondStep = (props) => {
   return (
     <div className={styles.payment}>
       <div className={styles.paymenSummaryContainer}>
-        <span>Confirm and process your payment Pago Poliza</span>
+        <span>Confirm and process your payment</span>
         <h4>COP $100.00</h4>
       </div>
       <div className={styles.paymentCardContainer}>

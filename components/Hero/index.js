@@ -21,9 +21,7 @@ const Hero = () => {
             </Link>
           </span>
         </div>
-        <div className={styles.team}>
-        <Image src="/Onboard.png" alt="team"  layout='fill' objectFit='contain'/>
-        </div>
+        <Image className={styles.team} src="/OnboardLogo.png" alt="team"  width={522} height={478}/>
       </section>
     );
   };

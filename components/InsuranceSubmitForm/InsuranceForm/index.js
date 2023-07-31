@@ -14,7 +14,7 @@ const InsuranceForm = (props) => {
         className={styles.formInput}
         type="text"
         name="fullname"
-        placeholder="Full Name"
+        placeholder="Full name"
       />
 
       <label className={styles.formLabel}>Identification</label>
@@ -22,7 +22,7 @@ const InsuranceForm = (props) => {
         className={styles.formInput}
         type="text"
         name="displayName"
-        placeholder="Steve"
+        placeholder="Identification number"
       />
 
       <label className={styles.formLabel}>Email</label>

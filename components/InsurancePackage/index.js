@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import InsuranceSubmitForm from "../InsuranceSubmitForm";
 
-const InsurancePackage = () => {
+const InsurancePackage = ({onchangeOpenForm}) => {
   const [isSubmit, setSubmit] = useState(false);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const InsurancePackage = () => {
         </div>
       </div>
 
-      <button onClick={() => onChangeSubmit()}>Ready To get a quote?</button>
+      <button onClick={() => onchangeOpenForm()}>Ready To get a quote?</button>
 
       
       {/* <div className={styles.submitFormContainer}>

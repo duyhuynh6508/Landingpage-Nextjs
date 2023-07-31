@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InsuranceForm from "./InsuranceForm";
 import SecondStep from "./SecondStep";
 import ThirdStep from "./ThirdStep";
+import FourStep from "./FourStep";
 import LastStep from "./LastStep";
 import MultiStepProgressBar from "./MultiStepProgressBar";
 import styles from "@/styles/Home.module.css";
 
 
 
-const InsuranceSubmitForm = () => {
+const InsuranceSubmitForm = ({handleChangeOpenForm}) => {
   //For manageing state of multi steps Form
   const [page, setPage] = useState(0);
 
@@ -25,7 +26,7 @@ const InsuranceSubmitForm = () => {
       return <SecondStep nextStep={nextStep} />;
     else if (page === 2)
       return <ThirdStep nextStep={nextStep} />;
-    else return <LastStep nextStep={nextStep} />;
+    else return <FourStep nextStep={nextStep} />;
   };
 
   const displayTitle = () => {
@@ -42,6 +43,15 @@ const InsuranceSubmitForm = () => {
     return title;
   }
 
+  const handlePageChange =() =>{
+    if(page === 3){
+      handleChangeOpenForm();
+      setPage(0)
+    }
+    else{
+      setPage((currPage) => currPage + 1);
+    }
+  }
   return (
     <div className={styles.userForm}>
       <div className={styles.progressBar}>
@@ -53,16 +63,14 @@ const InsuranceSubmitForm = () => {
           <h1 className={styles.formTitle}>
               {displayTitle()}
           </h1>
-          <h2>{page === 0 ? '$100.00' : null}</h2>
+          <h2 className={styles.price}>{page === 0 ? '$100.00' : null}</h2>
         </div>
         <div className={styles.userFormContainerBody}>{PageDisplay()}</div>
         <div className={styles.userFormContainerFooter}>
           <button className={styles.formButton}
-            onClick={() => {
-                setPage((currPage) => currPage + 1);
-            }}
+            onClick={() => handlePageChange()}
           >
-            Continue
+            {page === 3 ? 'Finish' : 'Continue'}
           </button>
         </div>
       </div>
